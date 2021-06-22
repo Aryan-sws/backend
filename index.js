@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 /*----------------------Data base-------------- */
 
-mongoose.connect("mongodb://localhost/test", {useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex:true })
+mongoose.connect("mongodb://localhost:27017/test", {useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex:true })
  .then((result)=>{
     console.log("Mongodb Database is connected...");
  })

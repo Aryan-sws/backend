@@ -24,7 +24,11 @@ const userSchema = new mongoose.Schema({
     //     // validate: [validateEmail, 'Please fill a valid email address'],
     //     match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
      },
-    
+    role:{
+        type: String,
+        enum: ['admin','superadmin','customer'],
+        default: 'customer'
+    }
 })
 
 var validateEmail = function(email) {
